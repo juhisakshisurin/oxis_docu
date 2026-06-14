@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OXIS & OXEV — Corporate Profile</title>
+    <meta name="description" content="OXIS Corporate Profile — Technology • AI • SaaS • Innovation • Events • Networking. Investor-ready company profile for OXIS and OXEV division.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+        @page { size: A4; margin: 0; }
+
+        :root {
+            --slate-950: #020617;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-600: #475569;
+            --slate-500: #64748b;
+            --slate-400: #94a3b8;
+            --slate-300: #cbd5e1;
+            --slate-200: #e2e8f0;
+            --slate-100: #f1f5f9;
+            --slate-50:  #f8fafc;
+            --blue-700: #1d4ed8;
+            --blue-600: #2563eb;
+            --blue-500: #3b82f6;
+            --blue-400: #60a5fa;
+            --cyan-600: #0891b2;
+            --cyan-500: #06b6d4;
+            --cyan-400: #22d3ee;
+            --purple-700: #6d28d9;
+            --purple-600: #7c3aed;
+            --purple-500: #8b5cf6;
+            --purple-400: #a78bfa;
+            --grad-primary: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            --grad-accent:  linear-gradient(90deg, #2563eb 0%, #06b6d4 50%, #7c3aed 100%);
+            --grad-dark:    linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        }
+
+        * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 10pt;
+            line-height: 1.6;
+            color: var(--slate-700);
+            background: #e2e8f0;
+        }
+
+        /* ── Page shell ── */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            height: 297mm;
+            padding: 20mm 18mm;
+            margin: 0 auto 12px;
+            background: #ffffff;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+        }
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; box-shadow: none; page-break-after: always; }
+        }
+
+        /* dot grid */
+        .dot-grid {
+            position: absolute; inset: 0; pointer-events: none; z-index: 0;
+            background-image: radial-gradient(var(--slate-200) 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.5;
+        }
+
+        .content { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; }
+
+        /* ── Doc header / footer ── */
+        .doc-hdr {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1.5px solid var(--slate-100);
+            padding-bottom: 10px; margin-bottom: 14px;
+        }
+        .doc-brand {
+            font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 12pt;
+            letter-spacing: 1px; color: var(--slate-900); display: flex; align-items: center; gap: 6px;
+        }
+        .doc-brand .dot { background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .doc-meta { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1.5px; color: var(--slate-400); font-weight: 600; }
+
+        .doc-ftr {
+            display: flex; justify-content: space-between; align-items: center;
+            border-top: 1px solid var(--slate-100); padding-top: 10px; margin-top: 14px;
+            font-size: 7.5pt; color: var(--slate-400);
+        }
+        .doc-ftr .conf { display: flex; align-items: center; gap: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .doc-ftr .conf::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue-500); display: inline-block; }
+        .doc-ftr .pg { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--slate-800); font-size: 9pt; }
+
+        /* ── Typography ── */
+        h2.sec-title { font-family: 'Outfit', sans-serif; font-size: 22pt; font-weight: 800; letter-spacing: -0.5px; color: var(--slate-900); margin: 0 0 6px; }
+        h3.sub-title  { font-family: 'Outfit', sans-serif; font-size: 13pt; font-weight: 700; color: var(--slate-800); margin: 0 0 8px; }
+        h4.card-title { font-family: 'Outfit', sans-serif; font-size: 10.5pt; font-weight: 700; color: var(--slate-900); margin: 0 0 4px; }
+        p { margin: 0 0 10px; color: var(--slate-600); font-size: 9.5pt; line-height: 1.65; }
+        p:last-child { margin-bottom: 0; }
+
+        .accent-bar { width: 36px; height: 3px; background: var(--grad-accent); border-radius: 2px; margin-bottom: 16px; }
+        .label-tag {
+            font-size: 7.5pt; text-transform: uppercase; letter-spacing: 2px; font-weight: 700;
+            color: var(--blue-600); margin-bottom: 4px; display: block;
+        }
+
+        /* ── Gradient text ── */
+        .grad-text { background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* ── Generic card ── */
+        .card {
+            background: #fff; border: 1px solid var(--slate-200); border-radius: 10px;
+            padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        /* ── Accent left border card ── */
+        .card-accent { border-left: 3px solid var(--blue-600); padding-left: 14px; }
+
+        /* ── Top-stripe card ── */
+        .card-top-stripe { position: relative; overflow: hidden; }
+        .card-top-stripe::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+        .stripe-blue::before   { background: var(--blue-600); }
+        .stripe-cyan::before   { background: var(--cyan-500); }
+        .stripe-purple::before { background: var(--purple-500); }
+        .stripe-dark::before   { background: var(--slate-800); }
+        .stripe-grad::before   { background: var(--grad-primary); }
+
+        /* bullet list */
+        .bul-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+        .bul-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 9pt; color: var(--slate-700); line-height: 1.45; }
+        .bul-list li::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--grad-primary); flex-shrink: 0; margin-top: 5px; }
+
+        /* tag pills */
+        .pill { display: inline-block; padding: 3px 9px; border-radius: 20px; font-size: 7.5pt; font-weight: 600; }
+        .pill-blue   { background: rgba(37,99,235,0.08); color: var(--blue-700); }
+        .pill-cyan   { background: rgba(6,182,212,0.1);  color: var(--cyan-600); }
+        .pill-purple { background: rgba(124,58,237,0.08); color: var(--purple-600); }
+        .pill-gray   { background: var(--slate-100); color: var(--slate-600); }
+
+        /* ── numbered objective ── */
+        .obj-item { display: flex; gap: 10px; align-items: flex-start; }
+        .obj-num {
+            width: 22px; height: 22px; border-radius: 50%; background: var(--grad-primary);
+            color: #fff; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 8.5pt;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .obj-text { font-size: 9.5pt; color: var(--slate-700); line-height: 1.5; font-weight: 500; }
+
+        /* ── Value cards ── */
+        .value-icon {
+            width: 32px; height: 32px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 8px;
+        }
+        .value-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        /* ── SVG icons (generic) ── */
+        .icon-box {
+            width: 34px; height: 34px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .icon-box svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        /* roadmap timeline */
+        .timeline { display: flex; flex-direction: column; gap: 0; }
+        .tl-item { display: flex; gap: 12px; align-items: flex-start; }
+        .tl-line { display: flex; flex-direction: column; align-items: center; }
+        .tl-dot { width: 14px; height: 14px; border-radius: 50%; border: 2.5px solid; flex-shrink: 0; }
+        .tl-connector { width: 2px; flex: 1; min-height: 14px; margin: 2px 0; }
+        .tl-blue   .tl-dot { border-color: var(--blue-600);   background: rgba(37,99,235,0.15); }
+        .tl-cyan   .tl-dot { border-color: var(--cyan-500);   background: rgba(6,182,212,0.15); }
+        .tl-purple .tl-dot { border-color: var(--purple-500); background: rgba(139,92,246,0.15); }
+        .tl-blue   .tl-connector { background: rgba(37,99,235,0.2); }
+        .tl-cyan   .tl-connector { background: rgba(6,182,212,0.2); }
+        .tl-purple .tl-connector { background: rgba(139,92,246,0.2); }
+
+        /* org chart */
+        .org-chart { display: flex; flex-direction: column; align-items: center; gap: 0; }
+        .org-parent {
+            background: var(--grad-primary); color: #fff; border-radius: 10px;
+            padding: 12px 28px; font-family: 'Outfit', sans-serif; font-weight: 800;
+            font-size: 14pt; letter-spacing: 1px; text-align: center;
+            box-shadow: 0 6px 20px rgba(37,99,235,0.25);
+        }
+        .org-trunk { width: 2px; height: 16px; background: var(--slate-300); margin: 0 auto; }
+        .org-branch-row { display: flex; align-items: flex-start; justify-content: center; gap: 0; }
+        .org-branch-col { display: flex; flex-direction: column; align-items: center; flex: 1; }
+        .org-h-line { width: 100%; height: 2px; background: var(--slate-300); }
+        .org-v-line { width: 2px; height: 16px; background: var(--slate-300); }
+        .org-child {
+            border-radius: 10px; padding: 10px 14px; text-align: center;
+            font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 9.5pt;
+            border: 2px solid; min-width: 90px;
+        }
+        .org-child.b { border-color: var(--blue-600); color: var(--blue-700); background: rgba(37,99,235,0.05); }
+        .org-child.c { border-color: var(--cyan-500);  color: var(--cyan-600);  background: rgba(6,182,212,0.05); }
+        .org-child.p { border-color: var(--purple-500);color: var(--purple-700);background: rgba(124,58,237,0.05); }
+        .org-child.s { border-color: var(--slate-500); color: var(--slate-700); background: var(--slate-50); }
+        .org-child-label { font-family: 'Inter', sans-serif; font-size: 7pt; font-weight: 400; color: var(--slate-500); margin-top: 3px; }
+
+        /* progress bar */
+        .prog-bar-wrap { background: var(--slate-100); border-radius: 6px; height: 6px; overflow: hidden; margin-top: 4px; }
+        .prog-bar { height: 100%; border-radius: 6px; }
+
+        /* dark page variant */
+        .page.dark-page { background: var(--grad-dark); }
+        .page.dark-page .dot-grid { background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); opacity: 1; }
+        .page.dark-page .doc-hdr { border-color: rgba(255,255,255,0.1); }
+        .page.dark-page .doc-brand { color: #fff; }
+        .page.dark-page .doc-meta { color: rgba(255,255,255,0.4); }
+        .page.dark-page .doc-ftr { border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.35); }
+        .page.dark-page .doc-ftr .pg { color: rgba(255,255,255,0.7); }
+        .page.dark-page .doc-ftr .conf::before { background: var(--cyan-400); }
+        .page.dark-page h2.sec-title { color: #fff; }
+        .page.dark-page p { color: rgba(255,255,255,0.7); }
+
+        /* =============================
+           PAGE 1 — COVER
+           ============================= */
+        .cover-page {
+            background:
+                radial-gradient(circle at 85% 15%, rgba(37,99,235,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 15% 85%, rgba(124,58,237,0.1) 0%, transparent 50%),
+                #ffffff;
+            padding: 28mm 20mm;
+        }
+        .cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
+        .logo-box {
+            display: flex; align-items: center; gap: 10px;
+        }
+        .logo-mark {
+            width: 52px; height: 52px; border-radius: 13px;
+            background: var(--grad-primary);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 24px rgba(37,99,235,0.3);
+        }
+        .logo-mark svg { width: 28px; height: 28px; fill: none; stroke: #fff; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+        .logo-name { font-family: 'Outfit', sans-serif; font-size: 30pt; font-weight: 900; letter-spacing: 2px; line-height: 1; color: var(--slate-900); }
+        .logo-name span { background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .cover-badge {
+            background: rgba(37,99,235,0.06); border: 1px solid rgba(37,99,235,0.15);
+            border-radius: 20px; padding: 6px 14px;
+            font-size: 7.5pt; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1.5px; color: var(--blue-700);
+        }
+
+        .cover-mid { margin-top: 20mm; padding-left: 20px; border-left: 4px solid; border-image: var(--grad-primary) 1; position: relative; }
+        .cover-type { font-size: 9pt; text-transform: uppercase; letter-spacing: 3px; color: var(--blue-600); font-weight: 700; margin-bottom: 10px; display: block; }
+        .cover-h1 { font-family: 'Outfit', sans-serif; font-size: 42pt; font-weight: 900; line-height: 1.05; letter-spacing: -1.5px; color: var(--slate-900); margin: 0 0 18px; }
+        .cover-h1 span { background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .cover-tagline { font-family: 'Outfit', sans-serif; font-size: 13pt; font-weight: 300; letter-spacing: 3px; color: var(--slate-500); text-transform: uppercase; margin-bottom: 16px; }
+        .cover-tagline strong { font-weight: 700; color: var(--slate-700); }
+        .cover-desc { font-size: 11pt; color: var(--slate-600); line-height: 1.7; max-width: 480px; margin-bottom: 20px; }
+
+        .cover-sectors { display: flex; flex-wrap: wrap; gap: 6px; }
+        .sector-pill {
+            background: linear-gradient(135deg, rgba(37,99,235,0.07) 0%, rgba(124,58,237,0.07) 100%);
+            border: 1px solid rgba(37,99,235,0.15);
+            border-radius: 20px; padding: 4px 12px;
+            font-size: 8pt; font-weight: 600; color: var(--blue-700); letter-spacing: 0.5px;
+        }
+
+        .cover-deco {
+            position: absolute; right: -18mm; bottom: -18mm;
+            width: 340px; height: 340px; opacity: 0.07; pointer-events: none;
+        }
+
+        .cover-bottom {
+            border-top: 1px solid var(--slate-200); padding-top: 18px;
+            display: flex; justify-content: space-between; align-items: flex-end;
+            margin-top: auto;
+        }
+        .cmeta { font-size: 8pt; color: var(--slate-500); line-height: 1.5; }
+        .cmeta strong { display: block; font-size: 8pt; color: var(--slate-900); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+
+        /* =============================
+           PAGE 2 — TABLE OF CONTENTS
+           ============================= */
+        .toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; flex: 1; align-content: start; margin-top: 6px; }
+        .toc-item {
+            display: flex; align-items: center; gap: 10px;
+            background: var(--slate-50); border-radius: 8px; padding: 10px 14px;
+            border: 1px solid var(--slate-100);
+        }
+        .toc-num {
+            font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 16pt;
+            line-height: 1; min-width: 30px;
+        }
+        .toc-item:nth-child(1)  .toc-num { color: var(--blue-600); }
+        .toc-item:nth-child(2)  .toc-num { color: var(--cyan-500); }
+        .toc-item:nth-child(3)  .toc-num { color: var(--purple-500); }
+        .toc-item:nth-child(4)  .toc-num { color: var(--blue-600); }
+        .toc-item:nth-child(5)  .toc-num { color: var(--cyan-500); }
+        .toc-item:nth-child(6)  .toc-num { color: var(--purple-500); }
+        .toc-item:nth-child(7)  .toc-num { color: var(--blue-600); }
+        .toc-item:nth-child(8)  .toc-num { color: var(--cyan-500); }
+        .toc-item:nth-child(9)  .toc-num { color: var(--purple-500); }
+        .toc-item:nth-child(10) .toc-num { color: var(--blue-600); }
+        .toc-item:nth-child(11) .toc-num { color: var(--cyan-500); }
+        .toc-item:nth-child(12) .toc-num { color: var(--purple-500); }
+        .toc-item:nth-child(13) .toc-num { color: var(--blue-600); }
+        .toc-label { font-size: 9.5pt; font-weight: 600; color: var(--slate-800); line-height: 1.3; }
+        .toc-label small { display: block; font-weight: 400; font-size: 8pt; color: var(--slate-500); }
+
+        /* =============================
+           EXEC SUMMARY
+           ============================= */
+        .exec-2col { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 12px; flex: 1; }
+        .stat-strip { display: flex; gap: 8px; margin-bottom: 12px; }
+        .stat-box {
+            flex: 1; background: var(--slate-50); border-radius: 8px; padding: 10px 12px;
+            border: 1px solid var(--slate-200); text-align: center;
+        }
+        .stat-num { font-family: 'Outfit', sans-serif; font-size: 18pt; font-weight: 900; line-height: 1; }
+        .stat-lbl { font-size: 7.5pt; color: var(--slate-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-top: 2px; }
+
+        /* =============================
+           CORE VALUES
+           ============================= */
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; flex: 1; align-content: start; }
+        .val-card { padding: 16px; border-radius: 10px; border: 1px solid var(--slate-200); background: #fff; }
+        .val-card:nth-child(1) .value-icon { background: rgba(37,99,235,0.08);  color: var(--blue-600); }
+        .val-card:nth-child(2) .value-icon { background: rgba(6,182,212,0.1);   color: var(--cyan-600); }
+        .val-card:nth-child(3) .value-icon { background: rgba(124,58,237,0.08); color: var(--purple-600); }
+        .val-card:nth-child(4) .value-icon { background: rgba(37,99,235,0.06);  color: var(--blue-700); }
+        .val-card:nth-child(5) .value-icon { background: rgba(6,182,212,0.06);  color: var(--cyan-700, #0e7490); }
+        .val-card:nth-child(6) .value-icon { background: rgba(124,58,237,0.06); color: var(--purple-700); }
+
+        /* =============================
+           DIVISION STRUCTURE
+           ============================= */
+        .div-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+        .div-card {
+            border-radius: 10px; padding: 16px; border: 1px solid var(--slate-200);
+            background: #fff; display: flex; flex-direction: column; gap: 8px;
+        }
+        .div-card-head { display: flex; align-items: center; gap: 10px; }
+        .div-badge {
+            border-radius: 8px; padding: 6px 10px;
+            font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 11pt;
+            letter-spacing: 1px; line-height: 1;
+        }
+        .div-badge.b { background: rgba(37,99,235,0.1); color: var(--blue-700); }
+        .div-badge.c { background: rgba(6,182,212,0.1);  color: var(--cyan-600); }
+        .div-badge.p { background: rgba(124,58,237,0.1); color: var(--purple-700); }
+        .div-badge.s { background: var(--slate-100);     color: var(--slate-700); }
+
+        /* =============================
+           SERVICES
+           ============================= */
+        .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .svc-card {
+            border-radius: 10px; padding: 14px; border: 1px solid var(--slate-200); background: #fff;
+            display: flex; flex-direction: column; gap: 7px;
+        }
+        .svc-icon { width: 34px; height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .svc-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .svc-name { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 10pt; color: var(--slate-900); }
+        .svc-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 3px; }
+        .svc-items li { font-size: 8.5pt; color: var(--slate-500); padding-left: 10px; position: relative; }
+        .svc-items li::before { content: '–'; position: absolute; left: 0; color: var(--slate-400); }
+
+        /* =============================
+           OXEV DARK PAGE
+           ============================= */
+        .oxev-pill {
+            display: inline-block; background: rgba(6,182,212,0.15); border: 1px solid var(--cyan-500);
+            color: var(--cyan-400); border-radius: 20px; padding: 4px 12px;
+            font-size: 7.5pt; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .oxev-headline { font-family: 'Outfit', sans-serif; font-size: 32pt; font-weight: 900; color: #fff; line-height: 1.05; letter-spacing: -1px; margin: 0 0 12px; }
+        .oxev-headline span { background: linear-gradient(90deg, var(--blue-400) 0%, var(--purple-400) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .oxev-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 14px; }
+        .oxev-card {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px; padding: 14px; backdrop-filter: blur(4px);
+        }
+        .oxev-card-label { font-size: 7pt; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; color: var(--cyan-400); margin-bottom: 5px; display: block; }
+        .oxev-card-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 11pt; color: #fff; margin-bottom: 6px; }
+        .oxev-card p { font-size: 8.5pt; color: rgba(255,255,255,0.6); }
+        .oxev-services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+        .oxev-svc-card {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px; padding: 14px;
+        }
+        .oxev-svc-label { font-size: 7pt; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 4px; display: block; }
+        .oxev-svc-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 11.5pt; color: #fff; margin-bottom: 8px; }
+        .oxev-svc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+        .oxev-svc-list li { font-size: 8.5pt; color: rgba(255,255,255,0.55); display: flex; gap: 6px; align-items: flex-start; }
+        .oxev-svc-list li::before { content: '›'; color: var(--cyan-400); font-weight: 700; flex-shrink: 0; }
+
+        /* =============================
+           PARTNERSHIP
+           ============================= */
+        .partner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex: 1; align-content: start; }
+        .partner-card {
+            border-radius: 10px; padding: 16px; border: 1px solid var(--slate-200); background: #fff;
+            display: flex; flex-direction: column; gap: 7px;
+        }
+        .partner-num {
+            font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 20pt; line-height: 1;
+        }
+        .partner-card:nth-child(1) .partner-num { color: var(--blue-500); }
+        .partner-card:nth-child(2) .partner-num { color: var(--cyan-500); }
+        .partner-card:nth-child(3) .partner-num { color: var(--purple-500); }
+        .partner-card:nth-child(4) .partner-num { color: var(--blue-700); }
+        .partner-card:nth-child(5) .partner-num { color: var(--cyan-600); }
+        .partner-card:nth-child(6) .partner-num { color: var(--purple-700); }
+
+        /* =============================
+           ROADMAP
+           ============================= */
+        .roadmap-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; flex: 1; align-content: start; }
+        .roadmap-col { border-radius: 10px; padding: 16px; border: 1px solid var(--slate-200); background: #fff; }
+        .roadmap-phase {
+            font-size: 7.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+            margin-bottom: 4px; display: block;
+        }
+        .roadmap-col.r1 .roadmap-phase { color: var(--blue-600); }
+        .roadmap-col.r2 .roadmap-phase { color: var(--cyan-600); }
+        .roadmap-col.r3 .roadmap-phase { color: var(--purple-600); }
+        .roadmap-title { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 12pt; margin-bottom: 10px; color: var(--slate-900); }
+        .roadmap-items { display: flex; flex-direction: column; gap: 6px; }
+        .roadmap-item { display: flex; gap: 7px; align-items: flex-start; }
+        .rdot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+        .r1 .rdot { background: var(--blue-500); }
+        .r2 .rdot { background: var(--cyan-500); }
+        .r3 .rdot { background: var(--purple-500); }
+        .roadmap-item span { font-size: 9pt; color: var(--slate-600); line-height: 1.4; }
+
+        /* =============================
+           CONTACT PAGE
+           ============================= */
+        .contact-2col { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 12px; flex: 1; }
+        .contact-cards { display: flex; flex-direction: column; gap: 8px; }
+        .con-card {
+            background: #fff; border: 1px solid var(--slate-200); border-radius: 10px;
+            padding: 14px 16px; display: flex; align-items: center; gap: 12px;
+        }
+        .con-icon { width: 40px; height: 40px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .con-icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .con-lbl { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1px; color: var(--slate-500); font-weight: 700; }
+        .con-val { font-size: 10.5pt; font-weight: 600; color: var(--slate-900); }
+        .contact-brand-box {
+            background: linear-gradient(135deg, var(--slate-50) 0%, var(--slate-100) 100%);
+            border: 1px solid var(--slate-200); border-radius: 12px; padding: 24px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .contact-brand-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad-accent); }
+        .cb-logo { width: 60px; height: 60px; border-radius: 14px; background: var(--grad-primary); display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 24px rgba(37,99,235,0.2); margin-bottom: 14px; }
+        .cb-logo svg { width: 32px; height: 32px; fill: none; stroke: #fff; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+        .cb-name { font-family: 'Outfit', sans-serif; font-size: 22pt; font-weight: 900; color: var(--slate-900); }
+        .cb-name span { background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .cb-tag { font-size: 8.5pt; color: var(--slate-500); line-height: 1.6; margin-top: 8px; }
+
+        /* closing spread */
+        .closing-dark {
+            background: var(--grad-dark); border-radius: 12px; padding: 24px;
+            color: #fff; margin-top: 12px; text-align: center; position: relative; overflow: hidden;
+        }
+        .closing-dark::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 50%, rgba(37,99,235,0.15) 0%, transparent 60%); }
+        .closing-dark-content { position: relative; z-index: 2; }
+
+    </style>
+</head>
+<body>
+
+<!-- =====================================================================
+     PAGE 1 — COVER
+     ===================================================================== -->
+<div class="page cover-page" style="padding: 28mm 20mm; display: flex; flex-direction: column; justify-content: space-between;">
+    <div class="dot-grid"></div>
+
+    <!-- top -->
+    <div class="cover-top">
+        <div class="logo-box">
+            <div class="logo-mark">
+                <svg viewBox="0 0 24 24"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><line x1="12" y1="15.5" x2="22" y2="8.5"/><line x1="12" y1="15.5" x2="2" y2="8.5"/></svg>
+            </div>
+            <div class="logo-name">OXIS<span>.</span></div>
+        </div>
+        <div class="cover-badge">Corporate Profile 2025–26</div>
+    </div>
+
+    <!-- mid -->
+    <div class="cover-mid" style="position:relative; padding-left:22px; border-left:4px solid transparent; background-clip:padding-box;">
+        <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#2563eb,#7c3aed);border-radius:2px;"></div>
+        <span class="cover-type">Corporate Portfolio</span>
+        <h1 class="cover-h1">Technology &amp;<br><span>Ecosystem Profile</span></h1>
+        <div class="cover-tagline">Building Technology. <strong>Empowering Innovation.</strong> Connecting Ecosystems.</div>
+        <p class="cover-desc">
+            OXIS is a technology-driven innovation company focused on delivering world-class
+            software, AI solutions, SaaS platforms, and digital transformation services — while its
+            division <strong>OXEV</strong> powers the innovation ecosystem through events, hackathons,
+            and strategic networking.
+        </p>
+        <div class="cover-sectors">
+            <div class="sector-pill">Technology</div>
+            <div class="sector-pill">Artificial Intelligence</div>
+            <div class="sector-pill">SaaS</div>
+            <div class="sector-pill">Innovation</div>
+            <div class="sector-pill">Events &amp; Networking</div>
+            <div class="sector-pill">Digital Transformation</div>
+        </div>
+    </div>
+
+    <!-- deco -->
+    <svg class="cover-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="90" stroke="#2563eb" stroke-width="1" fill="none" stroke-dasharray="2 4"/>
+        <circle cx="100" cy="100" r="70" stroke="#7c3aed" stroke-width="0.75" fill="none"/>
+        <polygon points="100,20 170,65 170,135 100,180 30,135 30,65" stroke="#06b6d4" stroke-width="0.5" fill="none"/>
+        <line x1="100" y1="20" x2="100" y2="180" stroke="#2563eb" stroke-width="0.3"/>
+        <line x1="30" y1="65" x2="170" y2="135" stroke="#2563eb" stroke-width="0.3"/>
+        <line x1="30" y1="135" x2="170" y2="65" stroke="#2563eb" stroke-width="0.3"/>
+    </svg>
+
+    <!-- bottom meta -->
+    <div class="cover-bottom">
+        <div class="cmeta"><strong>Parent Company</strong>OXIS Technology Group</div>
+        <div class="cmeta"><strong>Events Division</strong>OXEV — Events &amp; Networking</div>
+        <div class="cmeta"><strong>Headquarters</strong>Chennai, Tamil Nadu, India</div>
+        <div class="cmeta"><strong>Classification</strong>Confidential &amp; Proprietary</div>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 2 — TABLE OF CONTENTS
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Table of Contents</div>
+        </header>
+        <h2 class="sec-title">Contents</h2>
+        <div class="accent-bar"></div>
+        <p style="margin-bottom:14px;">This document presents a comprehensive overview of OXIS — its structure, services, strategic direction, and partnership opportunities — prepared for investors, sponsors, enterprise clients, and government bodies.</p>
+
+        <div class="toc-grid">
+            <div class="toc-item"><div class="toc-num">01</div><div class="toc-label">Executive Summary<small>Company overview &amp; key highlights</small></div></div>
+            <div class="toc-item"><div class="toc-num">02</div><div class="toc-label">Corporate Purpose<small>Purpose statement &amp; positioning</small></div></div>
+            <div class="toc-item"><div class="toc-num">03</div><div class="toc-label">Company Overview<small>Industry, model &amp; operating domains</small></div></div>
+            <div class="toc-item"><div class="toc-num">04</div><div class="toc-label">Vision &amp; Mission<small>Strategic direction &amp; objectives</small></div></div>
+            <div class="toc-item"><div class="toc-num">05</div><div class="toc-label">Core Values<small>Guiding principles &amp; culture</small></div></div>
+            <div class="toc-item"><div class="toc-num">06</div><div class="toc-label">Business Divisions<small>Organizational structure &amp; diagram</small></div></div>
+            <div class="toc-item"><div class="toc-num">07</div><div class="toc-label">Operational Services<small>Full capability catalog</small></div></div>
+            <div class="toc-item"><div class="toc-num">08</div><div class="toc-label">OXEV Division<small>Events, networking &amp; community</small></div></div>
+            <div class="toc-item"><div class="toc-num">09</div><div class="toc-label">Strategic Objectives<small>Goals &amp; KPIs</small></div></div>
+            <div class="toc-item"><div class="toc-num">10</div><div class="toc-label">Partnership Opportunities<small>Collaboration &amp; sponsorship tiers</small></div></div>
+            <div class="toc-item"><div class="toc-num">11</div><div class="toc-label">Corporate Structure<small>Leadership &amp; governance</small></div></div>
+            <div class="toc-item"><div class="toc-num">12</div><div class="toc-label">Future Roadmap<small>1-year, 3-year &amp; 5-year goals</small></div></div>
+            <div class="toc-item"><div class="toc-num">13</div><div class="toc-label">Contact Information<small>Reach the team</small></div></div>
+        </div>
+
+        <div style="margin-top:auto;">
+            <div style="background:linear-gradient(135deg,rgba(37,99,235,0.04),rgba(124,58,237,0.04));border:1px solid var(--slate-200);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <p style="margin:0;font-size:8.5pt;color:var(--slate-600);">This document is strictly confidential and intended solely for the recipient. Unauthorized distribution or reproduction is prohibited. © 2025 OXIS Technology Group.</p>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">02</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 3 — EXECUTIVE SUMMARY
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Executive Summary</div>
+        </header>
+        <h2 class="sec-title">Executive Summary</h2>
+        <div class="accent-bar"></div>
+
+        <div class="stat-strip">
+            <div class="stat-box"><div class="stat-num grad-text">B2B</div><div class="stat-lbl">Primary Model</div></div>
+            <div class="stat-box"><div class="stat-num grad-text">5+</div><div class="stat-lbl">Service Lines</div></div>
+            <div class="stat-box"><div class="stat-num grad-text">AI</div><div class="stat-lbl">Core Focus</div></div>
+            <div class="stat-box"><div class="stat-num grad-text">SaaS</div><div class="stat-lbl">Product Strategy</div></div>
+        </div>
+
+        <div class="exec-2col" style="margin-top:10px;">
+            <div style="display:flex;flex-direction:column;gap:10px;">
+                <p style="font-size:11pt;font-weight:600;color:var(--slate-900);line-height:1.7;margin:0;">
+                    OXIS is a technology-driven innovation company established to build next-generation digital solutions that bridge the gap between technology and real-world impact.
+                </p>
+                <p>
+                    The company operates across five high-impact domains: Website Development, Software Engineering, Artificial Intelligence, SaaS Platform development, and Digital Transformation consulting. OXIS serves a diverse clientele ranging from early-stage startups and educational institutions to large-scale enterprises and government bodies.
+                </p>
+                <p>
+                    Through a combination of research-oriented product design and rapid execution, OXIS reduces the complexity of digital transformation. We work alongside scaling enterprises and technology ecosystems to deliver long-term value, setting new operational standards for modern businesses.
+                </p>
+                <p>
+                    <strong>OXEV</strong>, the dedicated event management and networking division of OXIS, amplifies the innovation ecosystem by connecting innovators, businesses, startups, students, and professionals through impactful events, hackathons, workshops, and community programs. OXEV creates spaces where ideas are born, connections are made, and innovation is accelerated.
+                </p>
+                <div style="background:linear-gradient(135deg,rgba(37,99,235,0.05),rgba(124,58,237,0.05));border-left:3px solid var(--blue-600);border-radius:0 8px 8px 0;padding:12px 14px;">
+                    <p style="margin:0;font-size:9.5pt;font-weight:600;color:var(--slate-800);font-style:italic;">"Building Technology. Empowering Innovation. Connecting Ecosystems."</p>
+                </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+                <div class="card">
+                    <h4 class="card-title" style="color:var(--blue-700);font-size:9pt;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Corporate Purpose</h4>
+                    <p>To create innovative technology solutions and collaborative ecosystems that accelerate digital transformation, foster innovation, and empower organizations, institutions, and individuals to achieve sustainable growth.</p>
+                </div>
+                <div class="card">
+                    <h4 class="card-title" style="color:var(--cyan-600);font-size:9pt;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Strategic Focus Areas</h4>
+                    <ul class="bul-list">
+                        <li>Website &amp; Software Development</li>
+                        <li>Artificial Intelligence &amp; ML</li>
+                        <li>SaaS Platforms &amp; Cloud Products</li>
+                        <li>Digital Transformation &amp; Consulting</li>
+                        <li>Event Management &amp; Community (OXEV)</li>
+                    </ul>
+                </div>
+                <div class="card" style="background:var(--slate-900);">
+                    <h4 class="card-title" style="color:var(--cyan-400);font-size:9pt;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Operating Model</h4>
+                    <div style="display:flex;flex-wrap:wrap;gap:5px;">
+                        <span class="pill" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);">B2B</span>
+                        <span class="pill" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);">B2C</span>
+                        <span class="pill" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);">Startups</span>
+                        <span class="pill" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);">Enterprises</span>
+                        <span class="pill" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);">Institutions</span>
+                        <span class="pill" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);">Communities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">03</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 4 — CORPORATE PURPOSE & OVERVIEW
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Corporate Purpose</div>
+        </header>
+        <h2 class="sec-title">Corporate Purpose &amp; Company Overview</h2>
+        <div class="accent-bar"></div>
+
+        <!-- Purpose statement -->
+        <div style="background:linear-gradient(135deg,var(--slate-900),#1e1b4b);border-radius:12px;padding:22px 24px;margin-bottom:12px;position:relative;overflow:hidden;">
+            <div style="position:absolute;right:-20px;top:-20px;width:120px;height:120px;background:radial-gradient(circle,rgba(99,102,241,0.2),transparent);border-radius:50%;"></div>
+            <span style="font-size:7.5pt;text-transform:uppercase;letter-spacing:2px;color:var(--cyan-400);font-weight:700;display:block;margin-bottom:8px;">Purpose Statement</span>
+            <p style="font-size:13pt;font-weight:600;color:#fff;line-height:1.65;margin:0;max-width:560px;">
+                To create innovative technology solutions and collaborative ecosystems that
+                <span style="color:var(--cyan-400);">accelerate digital transformation</span>,
+                foster innovation, and empower organizations, institutions, and individuals to achieve
+                <span style="color:var(--purple-400);">sustainable growth</span>.
+            </p>
+        </div>
+
+        <!-- Overview grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;align-content:start;">
+            <div class="card">
+                <h3 class="sub-title" style="font-size:11pt;border-bottom:1px solid var(--slate-100);padding-bottom:8px;margin-bottom:10px;">Company Profile</h3>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--slate-100);">
+                        <span style="font-size:8.5pt;color:var(--slate-500);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Company Name</span>
+                        <span style="font-size:9.5pt;font-weight:700;color:var(--slate-900);">OXIS</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--slate-100);">
+                        <span style="font-size:8.5pt;color:var(--slate-500);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Industry</span>
+                        <span style="font-size:9.5pt;font-weight:700;color:var(--slate-900);">Technology &amp; Innovation</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--slate-100);">
+                        <span style="font-size:8.5pt;color:var(--slate-500);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Website</span>
+                        <span style="font-size:9.5pt;font-weight:700;color:var(--blue-600);">oxis.in</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--slate-100);">
+                        <span style="font-size:8.5pt;color:var(--slate-500);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Location</span>
+                        <span style="font-size:9.5pt;font-weight:700;color:var(--slate-900);">Chennai, Tamil Nadu, India</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;">
+                        <span style="font-size:8.5pt;color:var(--slate-500);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Event Division</span>
+                        <span style="font-size:9.5pt;font-weight:700;color:var(--purple-700);">OXEV</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="sub-title" style="font-size:11pt;border-bottom:1px solid var(--slate-100);padding-bottom:8px;margin-bottom:10px;">Business Model</h3>
+                <ul class="bul-list" style="margin-bottom:12px;">
+                    <li><strong>B2B</strong> — Enterprise technology services &amp; partnerships</li>
+                    <li><strong>B2C</strong> — Direct consumer SaaS products &amp; tools</li>
+                    <li><strong>Institutions</strong> — Academic &amp; educational technology</li>
+                    <li><strong>Startups</strong> — Product development &amp; mentorship</li>
+                    <li><strong>Enterprises</strong> — Digital transformation consulting</li>
+                    <li><strong>Communities</strong> — Innovation &amp; developer ecosystems</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="sub-title" style="font-size:11pt;margin-bottom:10px;">Operating Domains</h3>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                    <span class="pill pill-blue">Technology</span>
+                    <span class="pill pill-blue">Artificial Intelligence</span>
+                    <span class="pill pill-cyan">Software Development</span>
+                    <span class="pill pill-cyan">SaaS Products</span>
+                    <span class="pill pill-purple">Digital Transformation</span>
+                    <span class="pill pill-purple">Event Technology</span>
+                    <span class="pill pill-gray">Innovation Ecosystems</span>
+                    <span class="pill pill-gray">Community Building</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="sub-title" style="font-size:11pt;margin-bottom:10px;">Target Segments</h3>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+                    <div style="background:var(--slate-50);border-radius:7px;padding:8px;text-align:center;font-size:8.5pt;font-weight:600;color:var(--slate-700);">Startups &amp; MSMEs</div>
+                    <div style="background:var(--slate-50);border-radius:7px;padding:8px;text-align:center;font-size:8.5pt;font-weight:600;color:var(--slate-700);">Large Enterprises</div>
+                    <div style="background:var(--slate-50);border-radius:7px;padding:8px;text-align:center;font-size:8.5pt;font-weight:600;color:var(--slate-700);">Government Bodies</div>
+                    <div style="background:var(--slate-50);border-radius:7px;padding:8px;text-align:center;font-size:8.5pt;font-weight:600;color:var(--slate-700);">Academic Institutions</div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">04</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 5 — VISION & MISSION
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Vision &amp; Mission</div>
+        </header>
+        <h2 class="sec-title">Vision &amp; Mission</h2>
+        <div class="accent-bar"></div>
+
+        <!-- Vision -->
+        <div style="background:var(--grad-dark);border-radius:12px;padding:22px 24px;margin-bottom:12px;position:relative;overflow:hidden;">
+            <div style="position:absolute;right:0;top:0;bottom:0;width:45%;background:radial-gradient(circle at 100% 50%,rgba(99,102,241,0.2),transparent 70%);"></div>
+            <div style="position:relative;z-index:2;">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                    <div style="width:36px;height:36px;border-radius:8px;background:rgba(6,182,212,0.2);display:flex;align-items:center;justify-content:center;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <span style="font-size:8pt;text-transform:uppercase;letter-spacing:2px;color:var(--cyan-400);font-weight:700;">Corporate Vision</span>
+                </div>
+                <p style="font-size:13.5pt;font-weight:600;color:#fff;line-height:1.65;margin:0;max-width:520px;">
+                    To become a globally recognized technology and innovation ecosystem empowering
+                    <span style="color:var(--blue-400);">organizations, entrepreneurs, students, and professionals</span>
+                    through transformative digital solutions and collaborative experiences.
+                </p>
+            </div>
+        </div>
+
+        <!-- Mission -->
+        <div class="card" style="margin-bottom:12px;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                <div style="width:36px;height:36px;border-radius:8px;background:rgba(37,99,235,0.1);display:flex;align-items:center;justify-content:center;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <span style="font-size:8pt;text-transform:uppercase;letter-spacing:2px;color:var(--blue-600);font-weight:700;">Corporate Mission</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                <div class="obj-item"><div class="obj-num">M1</div><div class="obj-text">Build world-class technology products that solve real-world challenges at scale.</div></div>
+                <div class="obj-item"><div class="obj-num">M2</div><div class="obj-text">Deliver AI-powered solutions that drive intelligent business decisions.</div></div>
+                <div class="obj-item"><div class="obj-num">M3</div><div class="obj-text">Create scalable SaaS platforms accessible to businesses of all sizes.</div></div>
+                <div class="obj-item"><div class="obj-num">M4</div><div class="obj-text">Enable complete digital transformation for enterprises and institutions.</div></div>
+                <div class="obj-item"><div class="obj-num">M5</div><div class="obj-text">Foster thriving innovation communities across talent, startups, and academia.</div></div>
+                <div class="obj-item"><div class="obj-num">M6</div><div class="obj-text">Connect talent, startups, academia, and industry through strategic collaboration.</div></div>
+            </div>
+        </div>
+
+        <!-- Strategic Pillars -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:14px;text-align:center;">
+                <div style="font-family:'Outfit',sans-serif;font-size:22pt;font-weight:900;color:var(--blue-600);line-height:1;">01</div>
+                <div style="font-size:9.5pt;font-weight:700;color:var(--slate-800);margin-top:6px;">Technology<br>Innovation</div>
+            </div>
+            <div style="background:rgba(6,182,212,0.05);border:1px solid rgba(6,182,212,0.15);border-radius:10px;padding:14px;text-align:center;">
+                <div style="font-family:'Outfit',sans-serif;font-size:22pt;font-weight:900;color:var(--cyan-500);line-height:1;">02</div>
+                <div style="font-size:9.5pt;font-weight:700;color:var(--slate-800);margin-top:6px;">Product<br>Excellence</div>
+            </div>
+            <div style="background:rgba(124,58,237,0.05);border:1px solid rgba(124,58,237,0.15);border-radius:10px;padding:14px;text-align:center;">
+                <div style="font-family:'Outfit',sans-serif;font-size:22pt;font-weight:900;color:var(--purple-500);line-height:1;">03</div>
+                <div style="font-size:9.5pt;font-weight:700;color:var(--slate-800);margin-top:6px;">Community<br>Empowerment</div>
+            </div>
+            <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:14px;text-align:center;">
+                <div style="font-family:'Outfit',sans-serif;font-size:22pt;font-weight:900;color:var(--slate-800);line-height:1;">04</div>
+                <div style="font-size:9.5pt;font-weight:700;color:var(--slate-800);margin-top:6px;">Global<br>Expansion</div>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">05</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 6 — CORE VALUES
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Core Values</div>
+        </header>
+        <h2 class="sec-title">Core Values</h2>
+        <div class="accent-bar"></div>
+        <p style="margin-bottom:16px;">Our values are the foundation of everything we build, every decision we make, and every relationship we form. They define who we are as a company and guide how we serve our clients, partners, and communities.</p>
+
+        <div class="values-grid">
+            <!-- Innovation -->
+            <div class="val-card card-top-stripe stripe-blue">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+                </div>
+                <h4 class="card-title">Innovation</h4>
+                <p>We relentlessly pursue creative thinking, emerging technologies, and novel approaches to solve complex problems and create transformative solutions that redefine industry standards.</p>
+            </div>
+            <!-- Excellence -->
+            <div class="val-card card-top-stripe stripe-cyan">
+                <div class="value-icon" style="background:rgba(6,182,212,0.1);color:var(--cyan-600);">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h4 class="card-title">Excellence</h4>
+                <p>We hold ourselves to the highest standards in every deliverable, ensuring precision, quality, and performance excellence across all products, services, and client engagements.</p>
+            </div>
+            <!-- Integrity -->
+            <div class="val-card card-top-stripe stripe-purple">
+                <div class="value-icon" style="background:rgba(124,58,237,0.1);color:var(--purple-600);">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h4 class="card-title">Integrity</h4>
+                <p>We operate with full transparency, honesty, and ethical accountability in all interactions — with our clients, partners, communities, and within our own team at every level.</p>
+            </div>
+            <!-- Collaboration -->
+            <div class="val-card card-top-stripe stripe-grad">
+                <div class="value-icon" style="background:rgba(37,99,235,0.08);color:var(--blue-700);">
+                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h4 class="card-title">Collaboration</h4>
+                <p>We believe in the power of collective intelligence. By forging meaningful partnerships with startups, institutions, enterprises, and communities, we co-create lasting value.</p>
+            </div>
+            <!-- Impact -->
+            <div class="val-card card-top-stripe stripe-cyan">
+                <div class="value-icon" style="background:rgba(6,182,212,0.08);color:var(--cyan-600);">
+                    <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </div>
+                <h4 class="card-title">Impact</h4>
+                <p>Every technology we build and every community we serve is driven by a commitment to creating measurable, meaningful, and lasting impact for people, organizations, and society.</p>
+            </div>
+            <!-- Customer Success -->
+            <div class="val-card card-top-stripe stripe-purple">
+                <div class="value-icon" style="background:rgba(124,58,237,0.08);color:var(--purple-700);">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <h4 class="card-title">Customer Success</h4>
+                <p>Our clients' success is our success. We are dedicated to delivering outcomes that exceed expectations, building long-term trust, and becoming indispensable partners in growth.</p>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">06</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 7 — BUSINESS DIVISIONS (Org Chart)
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Business Divisions</div>
+        </header>
+        <h2 class="sec-title">Business Divisions &amp; Structure</h2>
+        <div class="accent-bar"></div>
+        <p style="margin-bottom:18px;">OXIS operates as a multi-division technology group, with each division focused on a distinct high-value domain. This structure enables specialized delivery while maintaining cohesive strategic alignment.</p>
+
+        <!-- Org Chart -->
+        <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:12px;padding:24px;margin-bottom:14px;">
+            <div class="org-chart">
+                <div class="org-parent">OXIS — Technology Group</div>
+                <div class="org-trunk"></div>
+                <!-- horizontal bar across all 4 -->
+                <div style="display:flex;width:100%;align-items:flex-start;justify-content:center;">
+                    <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
+                        <div style="width:100%;height:2px;background:var(--slate-300);"></div>
+                        <div style="width:2px;height:16px;background:var(--slate-300);"></div>
+                        <div class="org-child b">OXEV<div class="org-child-label">Events &amp; Networking</div></div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
+                        <div style="width:100%;height:2px;background:var(--slate-300);"></div>
+                        <div style="width:2px;height:16px;background:var(--slate-300);"></div>
+                        <div class="org-child c">OXIS AI<div class="org-child-label">Artificial Intelligence</div></div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
+                        <div style="width:100%;height:2px;background:var(--slate-300);"></div>
+                        <div style="width:2px;height:16px;background:var(--slate-300);"></div>
+                        <div class="org-child p">OXIS SaaS<div class="org-child-label">Cloud &amp; Subscriptions</div></div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
+                        <div style="width:100%;height:2px;background:var(--slate-300);"></div>
+                        <div style="width:2px;height:16px;background:var(--slate-300);"></div>
+                        <div class="org-child s">OXIS Web<div class="org-child-label">Web &amp; Software Dev</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Division cards -->
+        <div class="div-cards">
+            <div class="div-card">
+                <div class="div-card-head">
+                    <div class="div-badge b">OXEV</div>
+                    <div>
+                        <div style="font-size:8.5pt;font-weight:700;color:var(--slate-800);">Events &amp; Networking Division</div>
+                        <div style="font-size:7.5pt;color:var(--slate-500);">Community-building &amp; innovation events</div>
+                    </div>
+                </div>
+                <p>Dedicated event management and community division. Organizes hackathons, conferences, workshops, startup meetups, and sponsorship programs.</p>
+            </div>
+            <div class="div-card">
+                <div class="div-card-head">
+                    <div class="div-badge c">OXIS AI</div>
+                    <div>
+                        <div style="font-size:8.5pt;font-weight:700;color:var(--slate-800);">Artificial Intelligence Solutions</div>
+                        <div style="font-size:7.5pt;color:var(--slate-500);">AI products, agents &amp; intelligent systems</div>
+                    </div>
+                </div>
+                <p>Builds AI-powered products, intelligent agents, chatbots, ML systems, and computer vision solutions for enterprise and consumer markets.</p>
+            </div>
+            <div class="div-card">
+                <div class="div-card-head">
+                    <div class="div-badge p">OXIS SaaS</div>
+                    <div>
+                        <div style="font-size:8.5pt;font-weight:700;color:var(--slate-800);">Cloud &amp; Subscription Products</div>
+                        <div style="font-size:7.5pt;color:var(--slate-500);">Scalable cloud platforms &amp; SaaS tools</div>
+                    </div>
+                </div>
+                <p>Develops cloud-native subscription software, productivity tools, and business management platforms serving diverse market segments globally.</p>
+            </div>
+            <div class="div-card">
+                <div class="div-card-head">
+                    <div class="div-badge s">OXIS Web</div>
+                    <div>
+                        <div style="font-size:8.5pt;font-weight:700;color:var(--slate-800);">Website &amp; Software Development</div>
+                        <div style="font-size:7.5pt;color:var(--slate-500);">Custom web, apps &amp; enterprise software</div>
+                    </div>
+                </div>
+                <p>Delivers corporate websites, e-commerce platforms, web applications, CRM/ERP systems, and enterprise-grade custom software solutions.</p>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">07</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 8 — OPERATIONAL SERVICES
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Operational Services</div>
+        </header>
+        <h2 class="sec-title">Operational Services</h2>
+        <div class="accent-bar"></div>
+        <p style="margin-bottom:14px;">OXIS delivers a comprehensive portfolio of technology services, built for enterprises, startups, institutions, and communities seeking high-impact digital outcomes.</p>
+
+        <div class="svc-grid" style="flex:1;align-content:start;">
+            <!-- Website Development -->
+            <div class="svc-card">
+                <div class="svc-icon" style="background:rgba(37,99,235,0.1);color:var(--blue-600);">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                </div>
+                <div class="svc-name">Website Development</div>
+                <ul class="svc-items">
+                    <li>Corporate &amp; Business Websites</li>
+                    <li>Startup &amp; Portfolio Websites</li>
+                    <li>E-Commerce Platforms</li>
+                    <li>Business Portals &amp; Dashboards</li>
+                    <li>Progressive Web Applications</li>
+                </ul>
+            </div>
+            <!-- Software Development -->
+            <div class="svc-card">
+                <div class="svc-icon" style="background:rgba(6,182,212,0.1);color:var(--cyan-600);">
+                    <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <div class="svc-name">Software Development</div>
+                <ul class="svc-items">
+                    <li>Enterprise Applications</li>
+                    <li>CRM &amp; ERP Systems</li>
+                    <li>Custom Business Platforms</li>
+                    <li>Workflow Automation</li>
+                    <li>API Integration &amp; Microservices</li>
+                </ul>
+            </div>
+            <!-- AI Solutions -->
+            <div class="svc-card">
+                <div class="svc-icon" style="background:rgba(124,58,237,0.1);color:var(--purple-600);">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+                </div>
+                <div class="svc-name">AI Solutions</div>
+                <ul class="svc-items">
+                    <li>AI Products &amp; Platforms</li>
+                    <li>Autonomous AI Agents</li>
+                    <li>Intelligent Chatbots &amp; NLP</li>
+                    <li>Machine Learning Systems</li>
+                    <li>Computer Vision Solutions</li>
+                </ul>
+            </div>
+            <!-- SaaS Products -->
+            <div class="svc-card">
+                <div class="svc-icon" style="background:rgba(37,99,235,0.07);color:var(--blue-500);">
+                    <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                </div>
+                <div class="svc-name">SaaS Products</div>
+                <ul class="svc-items">
+                    <li>Cloud-Native Platforms</li>
+                    <li>Subscription Software</li>
+                    <li>Productivity &amp; Collaboration Tools</li>
+                    <li>Business Management Software</li>
+                    <li>Analytics &amp; Reporting Platforms</li>
+                </ul>
+            </div>
+            <!-- Digital Transformation -->
+            <div class="svc-card">
+                <div class="svc-icon" style="background:rgba(6,182,212,0.08);color:var(--cyan-600);">
+                    <svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/></svg>
+                </div>
+                <div class="svc-name">Digital Transformation</div>
+                <ul class="svc-items">
+                    <li>Process Automation</li>
+                    <li>Technology Consulting</li>
+                    <li>Business Optimization</li>
+                    <li>Digital Strategy Design</li>
+                    <li>Legacy System Modernization</li>
+                </ul>
+            </div>
+            <!-- UI/UX & Design -->
+            <div class="svc-card">
+                <div class="svc-icon" style="background:rgba(124,58,237,0.08);color:var(--purple-600);">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>
+                </div>
+                <div class="svc-name">UI/UX &amp; Product Design</div>
+                <ul class="svc-items">
+                    <li>User Interface Design</li>
+                    <li>User Experience Strategy</li>
+                    <li>Design Systems &amp; Branding</li>
+                    <li>Prototyping &amp; Wireframing</li>
+                    <li>Accessibility &amp; Usability Testing</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">08</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 9 — OXEV DIVISION (dark)
+     ===================================================================== -->
+<div class="page dark-page" style="background:linear-gradient(140deg,#020617 0%,#0f0c29 50%,#1e1b4b 100%);">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta" style="color:rgba(255,255,255,0.4);">OXEV Division</div>
+        </header>
+
+        <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:14px;">
+            <div>
+                <div class="oxev-pill">Events &amp; Networking Division</div>
+                <h2 class="sec-title" style="color:#fff;margin-bottom:4px;">OXEV</h2>
+                <p style="font-size:11pt;font-weight:600;color:rgba(255,255,255,0.75);margin:0;line-height:1.6;max-width:500px;">
+                    The dedicated event management, networking, sponsorship, and community-building arm of OXIS — <span style="color:var(--cyan-400);">connecting innovators, businesses, startups, students, and professionals</span> through impactful experiences.
+                </p>
+            </div>
+            <div style="flex-shrink:0;background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.3);border-radius:12px;padding:14px 20px;text-align:center;min-width:120px;">
+                <div style="font-family:'Outfit',sans-serif;font-size:28pt;font-weight:900;color:var(--cyan-400);line-height:1;">OXEV</div>
+                <div style="font-size:7.5pt;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">By OXIS</div>
+            </div>
+        </div>
+
+        <!-- Mission -->
+        <div style="background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.2);border-radius:10px;padding:14px 18px;margin-bottom:12px;">
+            <span style="font-size:7.5pt;text-transform:uppercase;letter-spacing:1.5px;color:var(--cyan-400);font-weight:700;display:block;margin-bottom:4px;">Division Mission</span>
+            <p style="color:rgba(255,255,255,0.8);font-size:10.5pt;font-weight:500;margin:0;">Connecting innovators, businesses, startups, students, and professionals through impactful experiences that accelerate growth, spark collaboration, and build lasting communities.</p>
+        </div>
+
+        <!-- OXEV service cards -->
+        <div class="oxev-cards">
+            <div class="oxev-card">
+                <span class="oxev-card-label">Category 01</span>
+                <div class="oxev-card-title">Event Management</div>
+                <p>Conferences, technical events, corporate events, workshops, product launches, and large-scale summits executed with precision and professionalism.</p>
+            </div>
+            <div class="oxev-card">
+                <span class="oxev-card-label" style="color:var(--blue-400);">Category 02</span>
+                <div class="oxev-card-title">Hackathons</div>
+                <p>Software hackathons, hardware challenges, open innovation programs, and competitive coding events fostering breakthrough innovation.</p>
+            </div>
+            <div class="oxev-card">
+                <span class="oxev-card-label" style="color:var(--purple-400);">Category 03</span>
+                <div class="oxev-card-title">Sponsorship Mgmt</div>
+                <p>Sponsor acquisition, brand partnerships, event sponsorships, and corporate collaboration programs designed for maximum brand impact.</p>
+            </div>
+            <div class="oxev-card">
+                <span class="oxev-card-label">Category 04</span>
+                <div class="oxev-card-title">Networking Programs</div>
+                <p>Founder meetups, startup networking, industry connect programs, and professional community-building initiatives for ecosystem growth.</p>
+            </div>
+            <div class="oxev-card">
+                <span class="oxev-card-label" style="color:var(--blue-400);">Category 05</span>
+                <div class="oxev-card-title">Community Building</div>
+                <p>Student communities, developer ecosystems, startup networks, and innovation hubs connecting next-generation talent with industry.</p>
+            </div>
+            <div class="oxev-card">
+                <span class="oxev-card-label" style="color:var(--purple-400);">Category 06</span>
+                <div class="oxev-card-title">Digital Events</div>
+                <p>Virtual conferences, webinars, online hackathons, and hybrid event formats powered by cutting-edge event technology platforms.</p>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">09</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 10 — OXEV SERVICES DETAIL
+     ===================================================================== -->
+<div class="page dark-page" style="background:linear-gradient(140deg,#0f0c29 0%,#1e1b4b 100%);">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXEV<span class="dot">.</span></div>
+            <div class="doc-meta" style="color:rgba(255,255,255,0.4);">OXEV Services Detail</div>
+        </header>
+        <h2 class="sec-title" style="color:#fff;">OXEV — Services Portfolio</h2>
+        <div class="accent-bar"></div>
+
+        <div class="oxev-services-grid">
+            <div class="oxev-svc-card">
+                <span class="oxev-svc-label" style="color:var(--blue-400);">Event Management</span>
+                <div class="oxev-svc-title">Conferences &amp; Corporate Events</div>
+                <ul class="oxev-svc-list">
+                    <li>Technology Conferences &amp; Summits</li>
+                    <li>Industry Seminars &amp; Panel Discussions</li>
+                    <li>Corporate Award Ceremonies</li>
+                    <li>Product Launch Events</li>
+                    <li>Leadership Retreats &amp; Off-sites</li>
+                    <li>Annual Day &amp; Institution Events</li>
+                </ul>
+            </div>
+            <div class="oxev-svc-card">
+                <span class="oxev-svc-label" style="color:var(--cyan-400);">Innovation Events</span>
+                <div class="oxev-svc-title">Hackathons &amp; Challenges</div>
+                <ul class="oxev-svc-list">
+                    <li>24/48-Hour Software Hackathons</li>
+                    <li>Hardware &amp; IoT Build Challenges</li>
+                    <li>AI/ML Innovation Competitions</li>
+                    <li>Open Innovation Programs</li>
+                    <li>Inter-College Tech Challenges</li>
+                    <li>Industry Problem Statements</li>
+                </ul>
+            </div>
+            <div class="oxev-svc-card">
+                <span class="oxev-svc-label" style="color:var(--purple-400);">Networking</span>
+                <div class="oxev-svc-title">Startup &amp; Professional Networking</div>
+                <ul class="oxev-svc-list">
+                    <li>Founder &amp; Entrepreneur Meetups</li>
+                    <li>Investor-Startup Connect Sessions</li>
+                    <li>Industry Professional Networks</li>
+                    <li>Cross-sector Collaboration Forums</li>
+                    <li>Mentor-Mentee Programs</li>
+                    <li>Alumni &amp; Industry Bridge Events</li>
+                </ul>
+            </div>
+            <div class="oxev-svc-card">
+                <span class="oxev-svc-label" style="color:var(--blue-400);">Community Building</span>
+                <div class="oxev-svc-title">Ecosystems &amp; Communities</div>
+                <ul class="oxev-svc-list">
+                    <li>Student Technology Communities</li>
+                    <li>Developer &amp; Open Source Groups</li>
+                    <li>Startup Incubator Networks</li>
+                    <li>Innovation Lab Ecosystems</li>
+                    <li>Women in Tech Communities</li>
+                    <li>Regional Tech Hubs</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Stats bar -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;">
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px;text-align:center;">
+                <div style="font-family:'Outfit',sans-serif;font-size:20pt;font-weight:900;color:var(--blue-400);line-height:1;">Events</div>
+                <div style="font-size:7.5pt;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Management</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px;text-align:center;">
+                <div style="font-family:'Outfit',sans-serif;font-size:20pt;font-weight:900;color:var(--cyan-400);line-height:1;">Hack.</div>
+                <div style="font-size:7.5pt;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Hackathons</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px;text-align:center;">
+                <div style="font-family:'Outfit',sans-serif;font-size:20pt;font-weight:900;color:var(--purple-400);line-height:1;">Network</div>
+                <div style="font-size:7.5pt;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Programs</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px;text-align:center;">
+                <div style="font-family:'Outfit',sans-serif;font-size:20pt;font-weight:900;color:var(--blue-400);line-height:1;">Sponsor</div>
+                <div style="font-size:7.5pt;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Acquisition</div>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">10</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 11 — STRATEGIC OBJECTIVES
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Strategic Objectives</div>
+        </header>
+        <h2 class="sec-title">Strategic Objectives</h2>
+        <div class="accent-bar"></div>
+        <p style="margin-bottom:14px;">Our strategic objectives define the clear targets that guide every decision, investment, and initiative across OXIS and OXEV. These objectives are measured, time-bound, and directly tied to our overarching vision.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;align-content:start;">
+            <!-- Obj 1 -->
+            <div class="card card-top-stripe stripe-blue">
+                <div style="display:flex;align-items:flex-start;gap:10px;">
+                    <div style="font-family:'Outfit',sans-serif;font-size:26pt;font-weight:900;color:var(--blue-600);line-height:1;min-width:36px;">01</div>
+                    <div>
+                        <h4 class="card-title">Build Innovative Technology Products</h4>
+                        <p>Continuously develop and launch cutting-edge technology products in AI, web, and SaaS that solve real market problems and deliver measurable business value.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Obj 2 -->
+            <div class="card card-top-stripe stripe-cyan">
+                <div style="display:flex;align-items:flex-start;gap:10px;">
+                    <div style="font-family:'Outfit',sans-serif;font-size:26pt;font-weight:900;color:var(--cyan-500);line-height:1;min-width:36px;">02</div>
+                    <div>
+                        <h4 class="card-title">Establish a Strong SaaS Ecosystem</h4>
+                        <p>Launch and scale a suite of SaaS products targeting SMEs, enterprises, and educational institutions with high retention and subscription growth.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Obj 3 -->
+            <div class="card card-top-stripe stripe-purple">
+                <div style="display:flex;align-items:flex-start;gap:10px;">
+                    <div style="font-family:'Outfit',sans-serif;font-size:26pt;font-weight:900;color:var(--purple-500);line-height:1;min-width:36px;">03</div>
+                    <div>
+                        <h4 class="card-title">Accelerate AI Adoption</h4>
+                        <p>Democratize AI access by building industry-ready AI tools and platforms that empower businesses of all sizes to leverage machine intelligence effectively.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Obj 4 -->
+            <div class="card card-top-stripe stripe-grad">
+                <div style="display:flex;align-items:flex-start;gap:10px;">
+                    <div style="font-family:'Outfit',sans-serif;font-size:26pt;font-weight:900;background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;min-width:36px;">04</div>
+                    <div>
+                        <h4 class="card-title">Create Innovation Communities</h4>
+                        <p>Build large-scale, active innovation communities across cities and institutions, connecting thousands of students, developers, and entrepreneurs annually.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Obj 5 -->
+            <div class="card card-top-stripe stripe-blue">
+                <div style="display:flex;align-items:flex-start;gap:10px;">
+                    <div style="font-family:'Outfit',sans-serif;font-size:26pt;font-weight:900;color:var(--blue-600);line-height:1;min-width:36px;">05</div>
+                    <div>
+                        <h4 class="card-title">Organize Impactful Events</h4>
+                        <p>Through OXEV, execute high-quality events — hackathons, conferences, summits, and networking programs — that create tangible impact for participants and sponsors.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Obj 6 -->
+            <div class="card card-top-stripe stripe-cyan">
+                <div style="display:flex;align-items:flex-start;gap:10px;">
+                    <div style="font-family:'Outfit',sans-serif;font-size:26pt;font-weight:900;color:var(--cyan-500);line-height:1;min-width:36px;">06</div>
+                    <div>
+                        <h4 class="card-title">Enable Networking Opportunities</h4>
+                        <p>Facilitate meaningful connections between founders, investors, corporates, and academia through structured networking events and community programs.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Obj 7 -->
+            <div class="card card-top-stripe stripe-purple">
+                <div style="display:flex;align-items:flex-start;gap:10px;">
+                    <div style="font-family:'Outfit',sans-serif;font-size:26pt;font-weight:900;color:var(--purple-500);line-height:1;min-width:36px;">07</div>
+                    <div>
+                        <h4 class="card-title">Support Entrepreneurs &amp; Startups</h4>
+                        <p>Provide technology, resources, mentorship, and networking access to early-stage startups and entrepreneurs, helping them build and scale faster.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Obj 8 -->
+            <div class="card card-top-stripe stripe-dark">
+                <div style="display:flex;align-items:flex-start;gap:10px;">
+                    <div style="font-family:'Outfit',sans-serif;font-size:26pt;font-weight:900;color:var(--slate-700);line-height:1;min-width:36px;">08</div>
+                    <div>
+                        <h4 class="card-title">Expand Globally via Partnerships</h4>
+                        <p>Forge strategic alliances with international technology firms, research institutions, and innovation hubs to accelerate global market expansion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">11</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 12 — PARTNERSHIP OPPORTUNITIES
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Partnership Opportunities</div>
+        </header>
+        <h2 class="sec-title">Partnership Opportunities</h2>
+        <div class="accent-bar"></div>
+        <p style="margin-bottom:14px;">OXIS and OXEV welcome strategic collaborations across technology, academia, government, and industry. Our partnership programs are designed to create mutual value through shared resources, co-branding, and collaborative innovation.</p>
+
+        <div class="partner-grid">
+            <div class="partner-card card-top-stripe stripe-blue">
+                <div class="partner-num">01</div>
+                <h4 class="card-title">Technology Partnerships</h4>
+                <p>Co-develop technology products, share infrastructure, and collaborate on joint R&amp;D initiatives with established technology companies and emerging tech startups.</p>
+                <ul class="bul-list" style="margin-top:6px;">
+                    <li>Technology Co-Development</li>
+                    <li>Platform Integration Partnerships</li>
+                    <li>Infrastructure Sharing</li>
+                </ul>
+            </div>
+            <div class="partner-card card-top-stripe stripe-cyan">
+                <div class="partner-num">02</div>
+                <h4 class="card-title">Event Sponsorships</h4>
+                <p>Gain premium brand visibility across OXEV-organized hackathons, conferences, and networking events reaching thousands of innovators and professionals.</p>
+                <ul class="bul-list" style="margin-top:6px;">
+                    <li>Title &amp; Co-Sponsorships</li>
+                    <li>Category Sponsorships</li>
+                    <li>Branding &amp; Activation Packages</li>
+                </ul>
+            </div>
+            <div class="partner-card card-top-stripe stripe-purple">
+                <div class="partner-num">03</div>
+                <h4 class="card-title">Startup Collaborations</h4>
+                <p>Access the OXIS startup ecosystem for technology resources, go-to-market support, community access, and product co-creation opportunities.</p>
+                <ul class="bul-list" style="margin-top:6px;">
+                    <li>Incubation Support</li>
+                    <li>Product &amp; MVP Development</li>
+                    <li>Community Access &amp; Mentorship</li>
+                </ul>
+            </div>
+            <div class="partner-card card-top-stripe stripe-grad">
+                <div class="partner-num">04</div>
+                <h4 class="card-title">Academic Partnerships</h4>
+                <p>Partner with universities and educational institutions for research projects, industry-connect programs, campus hackathons, and curriculum integration.</p>
+                <ul class="bul-list" style="margin-top:6px;">
+                    <li>Campus Hackathons &amp; Events</li>
+                    <li>Student Community Programs</li>
+                    <li>Industry-Academia Research</li>
+                </ul>
+            </div>
+            <div class="partner-card card-top-stripe stripe-blue">
+                <div class="partner-num">05</div>
+                <h4 class="card-title">Research Collaborations</h4>
+                <p>Engage with OXIS AI and product teams for applied research in artificial intelligence, machine learning, and emerging technology domains.</p>
+                <ul class="bul-list" style="margin-top:6px;">
+                    <li>Applied AI Research</li>
+                    <li>Joint Publication Programs</li>
+                    <li>Innovation Labs &amp; Pilot Projects</li>
+                </ul>
+            </div>
+            <div class="partner-card card-top-stripe stripe-dark">
+                <div class="partner-num">06</div>
+                <h4 class="card-title">Corporate Engagement</h4>
+                <p>Structured corporate programs including employee tech upskilling, internal hackathons, innovation workshops, and enterprise community engagement.</p>
+                <ul class="bul-list" style="margin-top:6px;">
+                    <li>Corporate Training Programs</li>
+                    <li>Internal Hackathons</li>
+                    <li>CSR &amp; Social Innovation Programs</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">12</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 13 — CORPORATE STRUCTURE
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Corporate Structure</div>
+        </header>
+        <h2 class="sec-title">Corporate Structure</h2>
+        <div class="accent-bar"></div>
+        <p style="margin-bottom:14px;">OXIS operates through a lean, agile organizational structure designed for innovation velocity, cross-functional collaboration, and scalable growth across all divisions.</p>
+
+        <!-- Leadership tiers -->
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;">
+            <!-- Executive -->
+            <div style="background:var(--grad-dark);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:14px;">
+                <div style="width:40px;height:40px;border-radius:10px;background:rgba(6,182,212,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                    <div style="font-family:'Outfit',sans-serif;font-weight:800;font-size:10pt;color:#fff;letter-spacing:1px;">EXECUTIVE LEADERSHIP</div>
+                    <div style="font-size:8.5pt;color:rgba(255,255,255,0.5);margin-top:2px;">Founders · CEO · CTO · Strategic Leadership</div>
+                </div>
+                <div style="margin-left:auto;display:flex;gap:6px;">
+                    <span class="pill" style="background:rgba(6,182,212,0.15);color:var(--cyan-400);">Strategy</span>
+                    <span class="pill" style="background:rgba(6,182,212,0.15);color:var(--cyan-400);">Vision</span>
+                    <span class="pill" style="background:rgba(6,182,212,0.15);color:var(--cyan-400);">Governance</span>
+                </div>
+            </div>
+            <!-- Division heads -->
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:11pt;color:var(--blue-600);">OXEV</div>
+                    <div style="font-size:8pt;color:var(--slate-600);margin-top:4px;">Events &amp; Community Lead</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:11pt;color:var(--cyan-600);">OXIS AI</div>
+                    <div style="font-size:8pt;color:var(--slate-600);margin-top:4px;">AI &amp; ML Lead</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:11pt;color:var(--purple-700);">OXIS SaaS</div>
+                    <div style="font-size:8pt;color:var(--slate-600);margin-top:4px;">Product Lead</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:11pt;color:var(--slate-700);">OXIS Web</div>
+                    <div style="font-size:8pt;color:var(--slate-600);margin-top:4px;">Engineering Lead</div>
+                </div>
+            </div>
+            <!-- Functions -->
+            <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;">
+                <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:8px;padding:10px;text-align:center;font-size:8.5pt;font-weight:600;color:var(--slate-700);">Engineering</div>
+                <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:8px;padding:10px;text-align:center;font-size:8.5pt;font-weight:600;color:var(--slate-700);">Design</div>
+                <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:8px;padding:10px;text-align:center;font-size:8.5pt;font-weight:600;color:var(--slate-700);">Marketing</div>
+                <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:8px;padding:10px;text-align:center;font-size:8.5pt;font-weight:600;color:var(--slate-700);">Operations</div>
+                <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:8px;padding:10px;text-align:center;font-size:8.5pt;font-weight:600;color:var(--slate-700);">Partnerships</div>
+            </div>
+        </div>
+
+        <!-- Operating principles -->
+        <div style="background:linear-gradient(135deg,rgba(37,99,235,0.04),rgba(124,58,237,0.04));border:1px solid var(--slate-200);border-radius:10px;padding:16px 20px;">
+            <h3 class="sub-title" style="font-size:11pt;margin-bottom:10px;">Operating Principles</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+                <div style="display:flex;gap:8px;align-items:flex-start;">
+                    <div style="width:8px;height:8px;border-radius:50%;background:var(--blue-500);flex-shrink:0;margin-top:6px;"></div>
+                    <div>
+                        <div style="font-size:9pt;font-weight:700;color:var(--slate-800);">Agile Execution</div>
+                        <div style="font-size:8pt;color:var(--slate-500);">Sprint-based delivery &amp; rapid iteration</div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-start;">
+                    <div style="width:8px;height:8px;border-radius:50%;background:var(--cyan-500);flex-shrink:0;margin-top:6px;"></div>
+                    <div>
+                        <div style="font-size:9pt;font-weight:700;color:var(--slate-800);">Outcome-Driven</div>
+                        <div style="font-size:8pt;color:var(--slate-500);">KPI-aligned, results-focused culture</div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-start;">
+                    <div style="width:8px;height:8px;border-radius:50%;background:var(--purple-500);flex-shrink:0;margin-top:6px;"></div>
+                    <div>
+                        <div style="font-size:9pt;font-weight:700;color:var(--slate-800);">Remote-First</div>
+                        <div style="font-size:8pt;color:var(--slate-500);">Distributed teams with async excellence</div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-start;">
+                    <div style="width:8px;height:8px;border-radius:50%;background:var(--blue-500);flex-shrink:0;margin-top:6px;"></div>
+                    <div>
+                        <div style="font-size:9pt;font-weight:700;color:var(--slate-800);">Open Collaboration</div>
+                        <div style="font-size:8pt;color:var(--slate-500);">Cross-functional team alignment</div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-start;">
+                    <div style="width:8px;height:8px;border-radius:50%;background:var(--cyan-500);flex-shrink:0;margin-top:6px;"></div>
+                    <div>
+                        <div style="font-size:9pt;font-weight:700;color:var(--slate-800);">Data-Informed</div>
+                        <div style="font-size:8pt;color:var(--slate-500);">Analytics-backed decisions at every level</div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-start;">
+                    <div style="width:8px;height:8px;border-radius:50%;background:var(--purple-500);flex-shrink:0;margin-top:6px;"></div>
+                    <div>
+                        <div style="font-size:9pt;font-weight:700;color:var(--slate-800);">Continuous Learning</div>
+                        <div style="font-size:8pt;color:var(--slate-500);">Knowledge-sharing &amp; skill development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">13</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 14 — FUTURE ROADMAP
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Future Roadmap</div>
+        </header>
+        <h2 class="sec-title">Future Roadmap</h2>
+        <div class="accent-bar"></div>
+        <p style="margin-bottom:14px;">OXIS has a clearly defined growth trajectory across three time horizons. Each phase builds upon the last, scaling technology infrastructure, community reach, and global presence.</p>
+
+        <div class="roadmap-cols" style="margin-bottom:12px;">
+            <!-- Year 1 -->
+            <div class="roadmap-col r1">
+                <span class="roadmap-phase">Phase 01</span>
+                <div class="roadmap-title">Short-Term<br>(Year 1)</div>
+                <div style="background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.15);border-radius:7px;padding:8px 10px;margin-bottom:10px;font-size:8pt;color:var(--blue-700);font-weight:600;">2025 — 2026</div>
+                <div class="roadmap-items">
+                    <div class="roadmap-item"><div class="rdot"></div><span>Launch OXIS flagship website &amp; brand</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Deploy first SaaS product to market</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Organize inaugural OXEV hackathon</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Build initial AI product suite</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Onboard first enterprise clients</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Establish developer community</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Secure strategic brand partnerships</span></div>
+                </div>
+            </div>
+            <!-- Year 3 -->
+            <div class="roadmap-col r2">
+                <span class="roadmap-phase">Phase 02</span>
+                <div class="roadmap-title">Medium-Term<br>(Year 3)</div>
+                <div style="background:rgba(6,182,212,0.06);border:1px solid rgba(6,182,212,0.15);border-radius:7px;padding:8px 10px;margin-bottom:10px;font-size:8pt;color:var(--cyan-700, #0e7490);font-weight:600;">2027 — 2028</div>
+                <div class="roadmap-items">
+                    <div class="roadmap-item"><div class="rdot"></div><span>Scale SaaS to 1,000+ subscribers</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Launch 5+ AI products &amp; tools</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Expand OXEV to 10+ cities</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Partner with 25+ universities</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Build startup accelerator program</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>International event partnerships</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Series A funding milestone</span></div>
+                </div>
+            </div>
+            <!-- Year 5 -->
+            <div class="roadmap-col r3">
+                <span class="roadmap-phase">Phase 03</span>
+                <div class="roadmap-title">Long-Term<br>(Year 5)</div>
+                <div style="background:rgba(124,58,237,0.06);border:1px solid rgba(124,58,237,0.15);border-radius:7px;padding:8px 10px;margin-bottom:10px;font-size:8pt;color:var(--purple-700);font-weight:600;">2029 — 2030</div>
+                <div class="roadmap-items">
+                    <div class="roadmap-item"><div class="rdot"></div><span>10,000+ SaaS customers globally</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Global AI platform launch</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>OXEV in 5+ countries</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>100,000+ community members</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>IPO readiness &amp; Series B</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Global partnership network</span></div>
+                    <div class="roadmap-item"><div class="rdot"></div><span>Innovation research institute</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Focus areas -->
+        <div style="background:linear-gradient(135deg,var(--slate-900),#1e1b4b);border-radius:12px;padding:16px 20px;">
+            <div style="font-size:8pt;text-transform:uppercase;letter-spacing:2px;color:var(--cyan-400);font-weight:700;margin-bottom:10px;">Roadmap Focus Areas</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <div style="background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.25);border-radius:20px;padding:5px 14px;font-size:8.5pt;font-weight:600;color:var(--blue-400);">AI Innovation</div>
+                <div style="background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.25);border-radius:20px;padding:5px 14px;font-size:8.5pt;font-weight:600;color:var(--cyan-400);">SaaS Expansion</div>
+                <div style="background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.25);border-radius:20px;padding:5px 14px;font-size:8.5pt;font-weight:600;color:var(--purple-400);">Global Partnerships</div>
+                <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:5px 14px;font-size:8.5pt;font-weight:600;color:rgba(255,255,255,0.7);">Community Growth</div>
+                <div style="background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.25);border-radius:20px;padding:5px 14px;font-size:8.5pt;font-weight:600;color:var(--blue-400);">Event Ecosystem</div>
+                <div style="background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.25);border-radius:20px;padding:5px 14px;font-size:8.5pt;font-weight:600;color:var(--cyan-400);">Developer Platform</div>
+                <div style="background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.25);border-radius:20px;padding:5px 14px;font-size:8.5pt;font-weight:600;color:var(--purple-400);">Digital Infrastructure</div>
+            </div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">14</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- =====================================================================
+     PAGE 15 — CONTACT INFORMATION
+     ===================================================================== -->
+<div class="page">
+    <div class="dot-grid"></div>
+    <div class="content">
+        <header class="doc-hdr">
+            <div class="doc-brand">OXIS<span class="dot">.</span></div>
+            <div class="doc-meta">Contact Information</div>
+        </header>
+        <h2 class="sec-title">Contact Information</h2>
+        <div class="accent-bar"></div>
+        <p style="margin-bottom:14px;">We welcome inquiries from investors, sponsors, enterprise clients, government agencies, academic institutions, and strategic partners. Our team is available to discuss collaborations, proposals, and opportunities.</p>
+
+        <div class="contact-2col">
+            <!-- Left: contact cards -->
+            <div style="display:flex;flex-direction:column;justify-content:space-between;">
+                <div class="contact-cards">
+                    <div class="con-card">
+                        <div class="con-icon" style="background:rgba(37,99,235,0.1);color:var(--blue-600);">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <div>
+                            <div class="con-lbl">Official Website</div>
+                            <div class="con-val">https://oxis.in</div>
+                        </div>
+                    </div>
+                    <div class="con-card">
+                        <div class="con-icon" style="background:rgba(6,182,212,0.1);color:var(--cyan-600);">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <div class="con-lbl">Headquarters</div>
+                            <div class="con-val">Chennai, Tamil Nadu, India</div>
+                        </div>
+                    </div>
+                    <div class="con-card">
+                        <div class="con-icon" style="background:rgba(124,58,237,0.1);color:var(--purple-600);">
+                            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </div>
+                        <div>
+                            <div class="con-lbl">LinkedIn</div>
+                            <div class="con-val">linkedin.com/company/oxis</div>
+                        </div>
+                    </div>
+                    <div class="con-card">
+                        <div class="con-icon" style="background:rgba(37,99,235,0.08);color:var(--blue-700);">
+                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <div class="con-lbl">OXEV Division Contact</div>
+                            <div class="con-val">events@oxis.in</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Closing note -->
+                <div style="background:linear-gradient(135deg,rgba(37,99,235,0.04),rgba(124,58,237,0.04));border:1px solid var(--slate-200);border-radius:10px;padding:14px 16px;margin-top:10px;">
+                    <h4 class="card-title" style="margin-bottom:6px;">For Strategic Engagements</h4>
+                    <p style="margin:0;font-size:9pt;">For investor inquiries, sponsorship proposals, partnership discussions, or government registrations, please reach out through our official website at <strong style="color:var(--blue-700);">oxis.in</strong>. Our team responds to all formal proposals within 2 business days.</p>
+                </div>
+            </div>
+
+            <!-- Right: brand panel -->
+            <div class="contact-brand-box">
+                <div class="cb-logo">
+                    <svg viewBox="0 0 24 24"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><line x1="12" y1="15.5" x2="22" y2="8.5"/><line x1="12" y1="15.5" x2="2" y2="8.5"/></svg>
+                </div>
+                <div class="cb-name">OXIS<span>.</span></div>
+                <div style="margin-top:8px;margin-bottom:14px;background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.2);border-radius:16px;padding:4px 12px;font-size:8pt;font-weight:700;color:var(--cyan-600);letter-spacing:1.5px;text-transform:uppercase;">OXEV Division</div>
+                <p class="cb-tag">Building Technology.<br>Empowering Innovation.<br>Connecting Ecosystems.</p>
+                <div style="margin-top:20px;border-top:1px solid var(--slate-200);padding-top:14px;width:100%;text-align:center;">
+                    <div style="font-size:8pt;color:var(--slate-500);line-height:1.6;">
+                        OXIS Technology Group<br>
+                        Chennai, Tamil Nadu, India<br>
+                        <strong style="color:var(--blue-600);">https://oxis.in</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- closing dark bar -->
+        <div style="background:var(--grad-dark);border-radius:10px;padding:14px 20px;margin-top:12px;display:flex;justify-content:space-between;align-items:center;">
+            <div style="font-family:'Outfit',sans-serif;font-size:10pt;font-weight:700;color:#fff;">OXIS — Corporate Profile 2025–26</div>
+            <div style="display:flex;gap:6px;">
+                <span style="background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.25);border-radius:16px;padding:3px 10px;font-size:7.5pt;color:var(--cyan-400);font-weight:600;">Confidential</span>
+                <span style="background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.25);border-radius:16px;padding:3px 10px;font-size:7.5pt;color:var(--blue-400);font-weight:600;">Proprietary</span>
+            </div>
+            <div style="font-size:8pt;color:rgba(255,255,255,0.4);">© 2025 OXIS Technology Group. All rights reserved.</div>
+        </div>
+
+        <footer class="doc-ftr">
+            <div class="conf">OXIS Technology — Confidential</div>
+            <div class="pg">15</div>
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>
